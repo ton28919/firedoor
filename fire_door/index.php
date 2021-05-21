@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+    include('config.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ include('config.php');
     <meta http-equiv="refresh" content="20;URL='index.php'">
     <title>Fire Door (ประตูหนีไฟ)</title>
     <!-- icon -->
-    <link rel="shortcut icon" href="https://cdn3.iconfinder.com/data/icons/social-media-2-4/63/flame-512.png" type="image/x-icon">
+    <link rel="shortcut icon" href="flame-icon.png" type="image/x-icon">
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Font -->
@@ -43,8 +43,6 @@ include('config.php');
         echo "<div class='p-3 pb-md-4 mx-auto'><h1>ชั้น 3</h1></div>";
         echo "<div class='row row-cols-1 row-cols-md-5 text-center'>";
         while ($row1 = pg_fetch_assoc($result1)) {
-            // echo json_encode($row);
-            // echo $row11['id'];
             if ($row11 == null) {
                 echo "<div class='col'>";
                 echo "<div class='card mb-4 rounded-3 shadow-sm'>";
@@ -53,15 +51,12 @@ include('config.php');
                 echo "</div>";
                 echo "<div class='card-body'>";
                 echo "<img id='img' src='firedoor.png'><br><br>";
-                // echo "<form method='post' action='changeStatus.php'>";
                 echo "<button type='submit'  class='w-100 btn btn-lg btn-success' >" . $row1['status'] . "</button>";
-                // echo "</form>";
                 echo "</div>";
                 echo "</div>";
                 echo "</div>";
             } else {
                 if ($row1['status'] == 'on' && $row11['date'] ==  $Date_time) {
-                    // echo "on<br>";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-danger'>";
@@ -78,7 +73,6 @@ include('config.php');
                     echo "</div>";
                     echo "</div>";
                 } else if ($row1['status'] == 'off' && $row11['date'] ==  $Date_time) {
-                    // echo "off";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-success'>";
@@ -102,8 +96,6 @@ include('config.php');
         echo "<div class='p-3 pb-md-4 mx-auto'><h1>ชั้น 4</h1></div>";
         echo "<div class='row row-cols-1 row-cols-md-5 text-center'>";
         while ($row2 = pg_fetch_assoc($result2)) {
-            // echo json_encode($row);
-            // echo $row['name'] . $row['status'];
             if ($row22 == null) {
                 echo "<div class='col'>";
                 echo "<div class='card mb-4 rounded-3 shadow-sm'>";
@@ -118,7 +110,6 @@ include('config.php');
                 echo "</div>";
             } else {
                 if ($row2['status'] == 'on' && $row22['date'] ==  $Date_time) {
-                    // echo "on<br>";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-danger'>";
@@ -135,7 +126,6 @@ include('config.php');
                     echo "</div>";
                     echo "</div>";
                 } else if ($row2['status'] == 'off' && $row22['date'] ==  $Date_time) {
-                    // echo "off";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-success'>";
@@ -159,8 +149,6 @@ include('config.php');
         echo "<div class='p-3 pb-md-4 mx-auto'><h1>ชั้น 5</h1></div>";
         echo "<div class='row row-cols-1 row-cols-md-5 text-center'>";
         while ($row3 = pg_fetch_assoc($result3)) {
-            // echo json_encode($row);
-            // echo $row['name'] . $row['status'];
             if ($row22 == null) {
                 echo "<div class='col'>";
                 echo "<div class='card mb-4 rounded-3 shadow-sm'>";
@@ -175,7 +163,6 @@ include('config.php');
                 echo "</div>";
             } else {
                 if ($row3['status'] == 'on' && $row33['date'] ==  $Date_time) {
-                    // echo "on<br>";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-danger'>";
@@ -192,7 +179,6 @@ include('config.php');
                     echo "</div>";
                     echo "</div>";
                 } else if ($row3['status'] == 'off' && $row33['date'] ==  $Date_time) {
-                    // echo "off";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-success'>";
@@ -216,8 +202,6 @@ include('config.php');
         echo "<div class='p-3 pb-md-4 mx-auto'><h1>ชั้น 6</h1></div>";
         echo "<div class='row row-cols-1 row-cols-md-5 text-center'>";
         while ($row4 = pg_fetch_assoc($result4)) {
-            // echo json_encode($row);
-            // echo $row['name'] . $row['status'];
             if ($row44 == null) {
                 echo "<div class='col'>";
                 echo "<div class='card mb-4 rounded-3 shadow-sm'>";
@@ -232,7 +216,6 @@ include('config.php');
                 echo "</div>";
             } else {
                 if ($row4['status'] == 'on' && $row44['date'] ==  $Date_time) {
-                    // echo "on<br>";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-danger'>";
@@ -249,7 +232,6 @@ include('config.php');
                     echo "</div>";
                     echo "</div>";
                 } else if ($row4['status'] == 'off' && $row44['date'] ==  $Date_time) {
-                    // echo "off";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-success'>";
@@ -273,8 +255,6 @@ include('config.php');
         echo "<div class='p-3 pb-md-4 mx-auto'><h1>ชั้น 7</h1></div>";
         echo "<div class='row row-cols-1 row-cols-md-5 text-center'>";
         while ($row5 = pg_fetch_assoc($result5)) {
-            // echo json_encode($row);
-            // echo $row['name'] . $row['status'];
             if ($row55 == null) {
                 echo "<div class='col'>";
                 echo "<div class='card mb-4 rounded-3 shadow-sm'>";
@@ -289,7 +269,6 @@ include('config.php');
                 echo "</div>";
             } else {
                 if ($row5['status'] == 'on' && $row55['date'] ==  $Date_time) {
-                    // echo "on<br>";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-danger'>";
@@ -306,7 +285,6 @@ include('config.php');
                     echo "</div>";
                     echo "</div>";
                 } else if ($row5['status'] == 'off' && $row55['date'] ==  $Date_time) {
-                    // echo "off";
                     echo "<div class='col'>";
                     echo "<div class='card mb-4 rounded-3 shadow-sm'>";
                     echo "<div class='card-header py-3 bg-success'>";
