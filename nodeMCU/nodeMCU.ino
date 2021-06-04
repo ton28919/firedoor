@@ -20,8 +20,7 @@ static const char* password = "password";
 
 
 //-------------------------------------------------------- Line config --------------------------------------------------------
-//#define LINE_TOKEN "LCMMcHH4Zms0GKR2WjM8AhKEVBVvx4tz9JiLLUKwk6C" //tester 
-//#define LINE_TOKEN "ThOt6EamBVusRqp5ivjNkKpvkw2D8LCwz0OBjWlcflz" // พี่โป้ง
+
 
 //-------------------------------------------------------- Web/Server address to read/write from --------------------------------------------------------
 const char *host = "IP address";   //https://circuits4you.com website or IP address of server
